@@ -1,24 +1,78 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { Modal } from '../Modal/Modal';
+import { EntitlementForm, EntitlementFormData } from '../Forms/EntitlementForm';
 
 
 export const Header = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleOpenModal = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleSubmitForm = async (data: EntitlementFormData) => {
+    setIsLoading(true);
+    try {
+      const response = await fetch('/api/entitlements', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to create entitlement');
+      }
+
+      // Close modal on success
+      setIsModalOpen(false);
+      
+      // Optional: You can add a success toast notification here
+      // Or refresh the entitlements list
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <header style={styles.header}>
       <div style={styles.container}>
-      <Link href="/" style={styles.logo}>
-        <h1>Entitlement Manager</h1>
-      </Link>
-      
-      <nav style={styles.nav}>
-        <Link href="/" style={styles.navLink}>
-          Dashboard
+        <Link href="/" style={styles.logo}>
+          <h1 style={styles.logoH1}>Entitlement Manager</h1>
         </Link>
-        <Link href="/entitlements/new" style={styles.navLink}>
-          Add Entitlement
-        </Link>
-      </nav>
-    </div>
+        
+        <nav style={styles.nav}>
+          <Link href="/" style={styles.navLink}>
+            Dashboard
+          </Link>
+          <button
+            onClick={handleOpenModal}
+            style={styles.navButton}
+          >
+            Add Entitlement
+          </button>
+        </nav>
+      </div>
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        title="Create New Entitlement"
+        size="medium"
+      >
+        <EntitlementForm
+          onSubmit={handleSubmitForm}
+          onCancel={handleCloseModal}
+          isLoading={isLoading}
+          submitButtonLabel="Create Entitlement"
+        />
+      </Modal>
     </header>
   );
 };
@@ -29,7 +83,7 @@ const styles = {
     backgroundColor: 'var(--card-background)',
     borderBottom: '1px solid var(--border-color)',
     boxShadow: 'var(--box-shadow)',
-    padding: '1rem 0'
+    padding: '1rem',
   },
   
   container: {
@@ -37,8 +91,8 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     maxWidth: '1200px',
-    margin: '0 auto',
-    padding: '0 1rem'
+    margin: '0',
+    padding: '0 '
   },
   
   logo: {
@@ -52,7 +106,8 @@ const styles = {
   },
   nav: {
     display: 'flex',
-    gap: '1.5rem'
+    gap: '1.5rem',
+    alignItems: 'center'
   },
   navLink: {
     color: 'var(--text-color)',
@@ -60,5 +115,16 @@ const styles = {
     textDecoration: 'none',
     cursor: 'pointer',
     transition: 'color 0.3s ease'
+  },
+  navButton: {
+    backgroundColor: 'var(--primary-color)',
+    color: 'white',
+    padding: '0.5rem 1rem',
+    border: 'none',
+    borderRadius: '0.25rem',
+    fontWeight: 500,
+    cursor: 'pointer',
+    transition: 'background-color 0.3s ease',
+    fontSize: '1rem'
   }
 };
