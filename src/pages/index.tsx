@@ -2,35 +2,28 @@
 import { Header } from "@/components/Header/Header";
 import { SearchBar } from "@/components/SearchBar/SearchBar";
 import { EntitlementGrid } from "@/components/EntitlementGrid/EntitlementGrid";
+import mockEntitlements from "./mockEntitlement";
+import { useState } from "react";
 
-const sampleEntitlements = [
-  {
-    entitlementID: "12345",
-    sku: "SKU-001",
-    product_type: "Software",
-    start_date: "2023-01-01T00:00:00Z",
-    end_date: "2024-01-01T00:00:00Z",
-    quantity: 10,
-    status: 'fulfilled'
-  },
-  {
-    entitlementID: "67890",
-    sku: "SKU-002",
-    product_type: "Service",
-    start_date: "2023-06-15T00:00:00Z",
-    end_date: "2024-06-15T00:00:00Z",
-    quantity: 5,
-    status: 'pending'
-  }
-
-];
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleClick = () => {
+    setIsLoading(true);
+    // Simulate a network request or some async operation
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }
+
   return (
-    <>
-      <Header />
-      <SearchBar />
-      <EntitlementGrid entitlements={sampleEntitlements} />
-    </>
+    
+      <div onClick={handleClick}>
+        <Header />
+        <SearchBar />
+        <EntitlementGrid entitlements={mockEntitlements} isLoading={isLoading}/>
+      </div>
+    
   );
 }

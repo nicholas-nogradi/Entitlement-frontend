@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { EntitlementCardSkeleton } from "./EntitlementCardSkeleton";
+import { it } from "node:test";
 
 type EntitlementCardProps = {
   entitlement: {
@@ -21,7 +22,8 @@ const formatDate = (dateString: string) => {
   };
 
 const getStatusColor = (status: string) => {
-    switch (status) {
+    const normalizedStatus = status.toUpperCase();
+    switch (normalizedStatus) {
       case 'FULFILLED':
         return styles.fulfilled;
       case 'PENDING':
@@ -29,7 +31,7 @@ const getStatusColor = (status: string) => {
       case 'CANCELED':
         return styles.canceled;
       default:
-        return '';
+        return styles.pending;
     }
   };
 
@@ -43,13 +45,15 @@ export const EntitlementCard = ({entitlement, isLoading = false}: EntitlementCar
   return (
     <div>
       <div style={styles.card}>
-        <div className={`${styles.statusBadge} ${getStatusColor(entitlement.status)}`}>
-          {entitlement.status}
-        </div>
-        
-        <div style={styles.cardHeader}>
-          <h3>ID: {entitlement.entitlementID}</h3>
-          <div style={styles.sku}>{entitlement.sku}</div>
+        <div style={styles.headerWithBadge}>
+          <div style={styles.cardHeader}>
+            <h3>ID: {entitlement.entitlementID}</h3>
+            <div style={styles.sku}>{entitlement.sku}</div>
+          </div>
+
+          <div style={{...styles.statusBadge, ...getStatusColor(entitlement.status) }}>
+            {entitlement.status}
+          </div>
         </div>
         
         <div style={styles.cardContent}>
@@ -82,8 +86,6 @@ export const EntitlementCard = ({entitlement, isLoading = false}: EntitlementCar
   );
 }
 
-
-
 const styles = {
   card: {
     backgroundColor: 'var(--card-background)',
@@ -91,22 +93,27 @@ const styles = {
     boxShadow: 'var(--box-shadow)',
     padding: '1.5rem',
     transition: 'var(--transition)',
-    position: 'relative' as const,
     cursor: 'pointer',
     height: '100%',
     display: 'flex',
     flexDirection: 'column' as const,
   },
+  headerWithBadge: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    gap: '1rem',
+    marginBottom: '1rem',
+  },
   statusBadge: {
-    position: 'absolute' as const,
-    top: '1rem',
-    right: '1rem',
     color: 'white',
     fontSize: '0.75rem',
     fontWeight: 600,
-    padding: '0.25rem 0.5rem',
+    padding: '0.25rem 0.75rem',
     borderRadius: '1rem',
     textTransform: 'uppercase' as const,
+    whiteSpace: 'nowrap' as const,
+    flexShrink: 0,
   },
   fulfilled: {
     backgroundColor: 'var(--secondary-color)',
@@ -118,7 +125,8 @@ const styles = {
     backgroundColor: 'var(--danger-color)',
   },
   cardHeader: {
-    marginBottom: '1rem',
+    flex: 1,
+    margin: 0,
   },
   sku: {
     color: 'var(--text-light)',

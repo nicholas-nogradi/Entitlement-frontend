@@ -1,11 +1,11 @@
 import { EntitlementCard } from "../EntitlementCard/EntitlementCard"
 
 
-export const EntitlementGrid = ({entitlements}) => {
+export const EntitlementGrid = ({entitlements, isLoading}) => {
     return (
         <div style={styles.grid}>
             {entitlements.map((entitlement) => (
-                <EntitlementCard key={entitlement.entitlementID} entitlement={entitlement} isLoading={false}/>
+                <EntitlementCard key={entitlement.entitlementID} entitlement={entitlement} isLoading={isLoading}/>
             ))}
         </div>
 

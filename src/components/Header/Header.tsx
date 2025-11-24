@@ -84,6 +84,8 @@ const styles = {
     borderBottom: '1px solid var(--border-color)',
     boxShadow: 'var(--box-shadow)',
     padding: '1rem',
+    width: '100%',
+    boxSizing: 'border-box' as const,
   },
   
   container: {
@@ -92,7 +94,9 @@ const styles = {
     alignItems: 'center',
     maxWidth: '1200px',
     margin: '0',
-    padding: '0 '
+    padding: '0 ',
+    width: '100%',
+    boxSizing: 'border-box' as const,
   },
   
   logo: {
