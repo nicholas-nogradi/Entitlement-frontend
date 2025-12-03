@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test-playwright": "playwright test"
   },
   "dependencies": {
     "next": "16.0.3",
@@ -14,10 +15,13 @@
     "react-dom": "19.2.0"
   },
   "devDependencies": {
+    "@chromatic-com/playwright": "^0.12.7",
+    "@playwright/test": "^1.57.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
+    "chromatic": "^13.3.4",
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
     "typescript": "^5"

@@ -24,7 +24,7 @@ export const Modal: React.FC<ModalProps> = ({
   };
 
   return (
-    <div style={styles.backdrop} onClick={handleBackdropClick}>
+    <div style={styles.backdrop} onClick={handleBackdropClick} role='dialog'>
       <div style={{ ...styles.modal, ...styles[size] }}>
         <div style={styles.header}>
           <h2 style={styles.title}>{title}</h2>

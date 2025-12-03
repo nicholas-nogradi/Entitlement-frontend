@@ -94,7 +94,7 @@ const styles = {
     padding: '1.5rem',
     transition: 'var(--transition)',
     cursor: 'pointer',
-    height: '100%',
+    minHeight:'300px',
     display: 'flex',
     flexDirection: 'column' as const,
   },

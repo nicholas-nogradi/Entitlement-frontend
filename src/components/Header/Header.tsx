@@ -83,7 +83,7 @@ const styles = {
     backgroundColor: 'var(--card-background)',
     borderBottom: '1px solid var(--border-color)',
     boxShadow: 'var(--box-shadow)',
-    padding: '1rem',
+    padding: '1rem 0',
     width: '100%',
     boxSizing: 'border-box' as const,
   },
@@ -93,8 +93,8 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     maxWidth: '1200px',
-    margin: '0',
-    padding: '0 ',
+    margin: '0 auto',
+    padding: '0 1rem',
     width: '100%',
     boxSizing: 'border-box' as const,
   },
@@ -106,7 +106,8 @@ const styles = {
   logoH1: {
     margin: 0,
     fontSize: '1.5rem',
-    color: 'var(--primary-color)'
+    color: 'var(--primary-color)',
+    padding: 0
   },
   nav: {
     display: 'flex',
@@ -118,7 +119,8 @@ const styles = {
     fontWeight: 500,
     textDecoration: 'none',
     cursor: 'pointer',
-    transition: 'color 0.3s ease'
+    transition: 'color 0.3s ease',
+    padding: 0
   },
   navButton: {
     backgroundColor: 'var(--primary-color)',
