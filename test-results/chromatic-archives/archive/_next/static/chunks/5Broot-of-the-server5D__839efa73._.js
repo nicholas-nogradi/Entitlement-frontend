@@ -477,11 +477,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$com
 ;
 const Modal = (t0)=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["c"])(21);
-    if ($[0] !== "3143b3b6095fda6b92b5dbab2b612122c224b54d43532d0c20389e917870aa54") {
+    if ($[0] !== "a6255c6fa3b0d41e656de7db19e5ba9dd3e9724d3dab511174fbfb144e13396d") {
         for(let $i = 0; $i < 21; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "3143b3b6095fda6b92b5dbab2b612122c224b54d43532d0c20389e917870aa54";
+        $[0] = "a6255c6fa3b0d41e656de7db19e5ba9dd3e9724d3dab511174fbfb144e13396d";
     }
     const { isOpen, onClose, title, children, size: t1 } = t0;
     const size = t1 === undefined ? "medium" : t1;
@@ -662,7 +662,7 @@ const styles = {
     },
     title: {
         margin: 0,
-        fontSize: '1.5rem',
+        fontSize: '0.5rem',
         color: 'var(--text-color, #333)'
     },
     closeButton: {
@@ -3063,79 +3063,61 @@ var _s = __turbopack_context__.k.signature();
 ;
 function Home() {
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["c"])(6);
-    if ($[0] !== "69392367f379b32bda387001ba18e553016069db6f24a2497dcfcfd864548dc5") {
-        for(let $i = 0; $i < 6; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["c"])(5);
+    if ($[0] !== "5e7ad5d5a69bbd2a6f20facfe817392a23ece3f2a06ad49a5121315ce177b467") {
+        for(let $i = 0; $i < 5; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "69392367f379b32bda387001ba18e553016069db6f24a2497dcfcfd864548dc5";
+        $[0] = "5e7ad5d5a69bbd2a6f20facfe817392a23ece3f2a06ad49a5121315ce177b467";
     }
-    const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     let t0;
+    let t1;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
-        t0 = ({
-            "Home[handleClick]": ()=>{
-                setIsLoading(true);
-                setTimeout({
-                    "Home[handleClick > setTimeout()]": ()=>{
-                        setIsLoading(false);
-                    }
-                }["Home[handleClick > setTimeout()]"], 2000);
-            }
-        })["Home[handleClick]"];
+        t0 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$Header$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["Header"], {}, void 0, false, {
+            fileName: "[project]/src/pages/index.tsx",
+            lineNumber: 19,
+            columnNumber: 10
+        }, this);
+        t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$SearchBar$2f$SearchBar$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["SearchBar"], {}, void 0, false, {
+            fileName: "[project]/src/pages/index.tsx",
+            lineNumber: 20,
+            columnNumber: 10
+        }, this);
         $[1] = t0;
+        $[2] = t1;
     } else {
         t0 = $[1];
-    }
-    const handleClick = t0;
-    let t1;
-    let t2;
-    if ($[2] === Symbol.for("react.memo_cache_sentinel")) {
-        t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2f$Header$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["Header"], {}, void 0, false, {
-            fileName: "[project]/src/pages/index.tsx",
-            lineNumber: 36,
-            columnNumber: 10
-        }, this);
-        t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$SearchBar$2f$SearchBar$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["SearchBar"], {}, void 0, false, {
-            fileName: "[project]/src/pages/index.tsx",
-            lineNumber: 37,
-            columnNumber: 10
-        }, this);
-        $[2] = t1;
-        $[3] = t2;
-    } else {
         t1 = $[2];
-        t2 = $[3];
     }
-    let t3;
-    if ($[4] !== isLoading) {
-        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            onClick: handleClick,
+    let t2;
+    if ($[3] !== isLoading) {
+        t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             children: [
+                t0,
                 t1,
-                t2,
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$EntitlementGrid$2f$EntitlementGrid$2e$tsx__$5b$client$5d$__$28$ecmascript$29$__["EntitlementGrid"], {
                     entitlements: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$pages$2f$mockEntitlement$2e$ts__$5b$client$5d$__$28$ecmascript$29$__["default"],
                     isLoading: isLoading
                 }, void 0, false, {
                     fileName: "[project]/src/pages/index.tsx",
-                    lineNumber: 46,
-                    columnNumber: 45
+                    lineNumber: 29,
+                    columnNumber: 23
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/pages/index.tsx",
-            lineNumber: 46,
+            lineNumber: 29,
             columnNumber: 10
         }, this);
-        $[4] = isLoading;
-        $[5] = t3;
+        $[3] = isLoading;
+        $[4] = t2;
     } else {
-        t3 = $[5];
+        t2 = $[4];
     }
-    return t3;
+    return t2;
 }
-_s(Home, "EmvgwIb3cHpoFpeP+WmEDbjx4y4=");
+_s(Home, "+SThRCGkngsF4NgIiL6AN16ylzc=");
 _c = Home;
 var _c;
 __turbopack_context__.k.register(_c, "Home");

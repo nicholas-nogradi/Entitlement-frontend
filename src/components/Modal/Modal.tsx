@@ -92,7 +92,7 @@ const styles = {
 
   title: {
     margin: 0,
-    fontSize: '1.5rem',
+    fontSize: '0.5rem',
     color: 'var(--text-color, #333)',
   },
 

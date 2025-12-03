@@ -9,17 +9,17 @@ import { useState } from "react";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleClick = () => {
-    setIsLoading(true);
-    // Simulate a network request or some async operation
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }
+  // const handleClick = () => {
+  //   setIsLoading(true);
+  //   // Simulate a network request or some async operation
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 2000);
+  // }
 
   return (
     
-      <div onClick={handleClick}>
+      <div >
         <Header />
         <SearchBar />
         <EntitlementGrid entitlements={mockEntitlements} isLoading={isLoading}/>
