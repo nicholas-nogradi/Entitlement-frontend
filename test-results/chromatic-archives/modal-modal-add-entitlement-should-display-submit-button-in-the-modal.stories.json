@@ -1,1 +1,1 @@
-{"title":"modal/Modal - Add Entitlement/should display submit button in the modal","stories":[{"name":"Snapshot #1","parameters":{"server":{"id":"modal-modal-add-entitlement-should-display-submit-button-in-the-modal-snapshot-1"},"chromatic":{"ignoreSelectors":["[data-testid=\"entitlement-grid\"]"]}}}]}
+{"title":"modal/Modal - Add Entitlement/should display submit button in the modal","stories":[]}
