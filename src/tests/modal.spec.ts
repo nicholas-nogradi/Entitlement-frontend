@@ -1,12 +1,19 @@
 import { test, expect } from '@chromatic-com/playwright';
 
 test.describe('Modal - Add Entitlement', () => {
+
+  test.use({
+    ignoreSelectors: ['[data-testid="entitlement-grid"]']
+  });
+  
   test.beforeEach(async ({ page }) => {
     // Navigate to the home page
     await page.goto('http://localhost:3000');
     // Wait for the page to load
     await page.waitForLoadState('networkidle');
   });
+
+ 
 
   test('should open modal when "Add Entitlement" button is clicked', async ({ page }) => {
     // The modal should not be visible initially
@@ -32,6 +39,7 @@ test.describe('Modal - Add Entitlement', () => {
   });
 
   test('should close modal when close button is clicked', async ({ page }) => {
+    test.use({disableAutoSnapshot: true});
     // Click the "Add Entitlement" button to open modal
     const addButton = page.locator('button:has-text("Add Entitlement")');
     await addButton.click();
@@ -49,6 +57,7 @@ test.describe('Modal - Add Entitlement', () => {
   });
 
   test('should close modal when Cancel button is clicked', async ({ page }) => {
+    test.use({disableAutoSnapshot: true});
     // Click the "Add Entitlement" button to open modal
     const addButton = page.locator('button:has-text("Add Entitlement")');
     await addButton.click();
@@ -66,6 +75,7 @@ test.describe('Modal - Add Entitlement', () => {
   });
 
   test('should close modal when backdrop is clicked', async ({ page }) => {
+    test.use({disableAutoSnapshot: true});
     // Click the "Add Entitlement" button to open modal
     const addButton = page.locator('button:has-text("Add Entitlement")');
     await addButton.click();

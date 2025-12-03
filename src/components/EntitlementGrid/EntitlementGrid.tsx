@@ -3,7 +3,7 @@ import { EntitlementCard } from "../EntitlementCard/EntitlementCard"
 
 export const EntitlementGrid = ({entitlements, isLoading}) => {
     return (
-        <div style={styles.container}>
+        <div style={styles.container} data-testid="entitlement-grid">
             <div style={styles.grid}>
                 {entitlements.map((entitlement) => (
                     <EntitlementCard key={entitlement.entitlementID} entitlement={entitlement} isLoading={isLoading}/>
