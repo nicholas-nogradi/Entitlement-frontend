@@ -3,7 +3,6 @@ import { test, expect } from '@chromatic-com/playwright';
 test.describe('Modal - Add Entitlement', () => {
   test.use({
     ignoreSelectors: ['[data-testid="entitlement-grid"]'],
-    disableAutoSnapshot: true,
     cropToViewport: true,
   });
 
