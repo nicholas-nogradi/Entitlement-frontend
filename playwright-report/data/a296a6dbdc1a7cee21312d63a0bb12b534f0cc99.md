@@ -1,0 +1,138 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - link "Entitlement Manager" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - heading "Entitlement Manager" [level=1] [ref=e7]
+        - navigation [ref=e8]:
+          - link "Dashboard" [ref=e9] [cursor=pointer]:
+            - /url: /
+          - button "Add Entitlement" [ref=e10] [cursor=pointer]
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - textbox "Search entitlements..." [ref=e13]
+        - button "Search" [ref=e14] [cursor=pointer]
+      - combobox [ref=e16]:
+        - option "All statuses" [selected]
+        - option "Fulfilled"
+        - option "Pending"
+        - option "Canceled"
+    - generic [ref=e18]:
+      - generic [ref=e20] [cursor=pointer]:
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - 'heading "ID: 12345" [level=3] [ref=e23]'
+            - generic [ref=e24]: SKU-001
+          - generic [ref=e25]: fulfilled
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - generic [ref=e28]: "Product:"
+            - generic [ref=e29]: Software
+          - generic [ref=e30]:
+            - generic [ref=e31]: "Start Date:"
+            - generic [ref=e32]: 12/31/2022
+          - generic [ref=e33]:
+            - generic [ref=e34]: "End Date:"
+            - generic [ref=e35]: 12/31/2023
+          - generic [ref=e36]:
+            - generic [ref=e37]: "Quantity:"
+            - generic [ref=e38]: "10"
+        - link "View Details →" [ref=e40]:
+          - /url: /entitlements/12345
+      - generic [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - 'heading "ID: 67890" [level=3] [ref=e45]'
+            - generic [ref=e46]: SKU-002
+          - generic [ref=e47]: pending
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: "Product:"
+            - generic [ref=e51]: Service
+          - generic [ref=e52]:
+            - generic [ref=e53]: "Start Date:"
+            - generic [ref=e54]: 6/14/2023
+          - generic [ref=e55]:
+            - generic [ref=e56]: "End Date:"
+            - generic [ref=e57]: 6/14/2024
+          - generic [ref=e58]:
+            - generic [ref=e59]: "Quantity:"
+            - generic [ref=e60]: "5"
+        - link "View Details →" [ref=e62]:
+          - /url: /entitlements/67890
+      - generic [ref=e64] [cursor=pointer]:
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - 'heading "ID: 11223" [level=3] [ref=e67]'
+            - generic [ref=e68]: SKU-003
+          - generic [ref=e69]: canceled
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - generic [ref=e72]: "Product:"
+            - generic [ref=e73]: Subscription
+          - generic [ref=e74]:
+            - generic [ref=e75]: "Start Date:"
+            - generic [ref=e76]: 3/9/2023
+          - generic [ref=e77]:
+            - generic [ref=e78]: "End Date:"
+            - generic [ref=e79]: 3/9/2024
+          - generic [ref=e80]:
+            - generic [ref=e81]: "Quantity:"
+            - generic [ref=e82]: "20"
+        - link "View Details →" [ref=e84]:
+          - /url: /entitlements/11223
+      - generic [ref=e86] [cursor=pointer]:
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - 'heading "ID: 44556" [level=3] [ref=e89]'
+            - generic [ref=e90]: SKU-004
+          - generic [ref=e91]: fulfilled
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - generic [ref=e94]: "Product:"
+            - generic [ref=e95]: License
+          - generic [ref=e96]:
+            - generic [ref=e97]: "Start Date:"
+            - generic [ref=e98]: 6/30/2023
+          - generic [ref=e99]:
+            - generic [ref=e100]: "End Date:"
+            - generic [ref=e101]: 6/30/2024
+          - generic [ref=e102]:
+            - generic [ref=e103]: "Quantity:"
+            - generic [ref=e104]: "15"
+        - link "View Details →" [ref=e106]:
+          - /url: /entitlements/44556
+      - generic [ref=e108] [cursor=pointer]:
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - 'heading "ID: 77889" [level=3] [ref=e111]'
+            - generic [ref=e112]: SKU-005
+          - generic [ref=e113]: pending
+        - generic [ref=e114]:
+          - generic [ref=e115]:
+            - generic [ref=e116]: "Product:"
+            - generic [ref=e117]: Service
+          - generic [ref=e118]:
+            - generic [ref=e119]: "Start Date:"
+            - generic [ref=e120]: 5/19/2023
+          - generic [ref=e121]:
+            - generic [ref=e122]: "End Date:"
+            - generic [ref=e123]: 5/19/2024
+          - generic [ref=e124]:
+            - generic [ref=e125]: "Quantity:"
+            - generic [ref=e126]: "8"
+        - link "View Details →" [ref=e128]:
+          - /url: /entitlements/77889
+  - button "Open Next.js Dev Tools" [ref=e134] [cursor=pointer]:
+    - generic [ref=e137]:
+      - text: Compiling
+      - generic [ref=e138]:
+        - generic [ref=e139]: .
+        - generic [ref=e140]: .
+        - generic [ref=e141]: .
+  - alert [ref=e142]
+```

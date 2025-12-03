@@ -2903,11 +2903,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Entitle
 ;
 const EntitlementGrid = (t0)=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["c"])(8);
-    if ($[0] !== "8d78bd22888ebb43ae595f76b0f6d8d0c569e15f46e3ee1b175f70facf089714") {
+    if ($[0] !== "43adf47f9021e121062c4947767d4b67f0155f826fd1b544bfb773010094d1d6") {
         for(let $i = 0; $i < 8; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "8d78bd22888ebb43ae595f76b0f6d8d0c569e15f46e3ee1b175f70facf089714";
+        $[0] = "43adf47f9021e121062c4947767d4b67f0155f826fd1b544bfb773010094d1d6";
     }
     const { entitlements, isLoading } = t0;
     let t1;
@@ -2938,13 +2938,14 @@ const EntitlementGrid = (t0)=>{
     if ($[6] !== t1) {
         t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             style: styles.container,
+            "data-testid": "entitlement-grid",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: styles.grid,
                 children: t1
             }, void 0, false, {
                 fileName: "[project]/src/components/EntitlementGrid/EntitlementGrid.tsx",
                 lineNumber: 34,
-                columnNumber: 40
+                columnNumber: 71
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/EntitlementGrid/EntitlementGrid.tsx",
